@@ -114,13 +114,13 @@
             ],
             "description": "[Apprise-api](https://github.com/caronc/apprise-api) Takes advantage of [Apprise](https://github.com/caronc/apprise) through your network with a user-friendly API. * Send notifications to more then 65+ services. * An incredibly lightweight gateway to Apprise. * A production ready micro-service at your disposal. Apprise API was designed to easily fit into existing (and new) eco-systems that are looking for a simple notification solution.",
             "env": [{
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID",
                     "label": "PUID",
                     "name": "PUID"
                 },
                 {
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID",
                     "label": "PGID",
                     "name": "PGID"
@@ -151,13 +151,13 @@
         {
             "description": "[Audacity](https://www.audacityteam.org/) is an easy-to-use, multi-track audio editor and recorder. Developed by a group of volunteers as open source.",
             "env": [{
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID",
                     "label": "PUID",
                     "name": "PUID"
                 },
                 {
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID",
                     "label": "PGID",
                     "name": "PGID"
@@ -300,13 +300,13 @@
             ],
             "description": "[BOINC](https://boinc.berkeley.edu/) is a platform for high-throughput computing on a large scale (thousands or millions of computers). It can be used for volunteer computing (using consumer devices) or grid computing (using organizational resources). It supports virtualized, parallel, and GPU-based applications.",
             "env": [{
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID",
                     "label": "PUID",
                     "name": "PUID"
                 },
                 {
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID",
                     "label": "PGID",
                     "name": "PGID"
@@ -739,7 +739,7 @@
                     "name": "PUID"
                 },
                 {
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID",
                     "label": "PGID",
                     "name": "PGID"
@@ -8930,3 +8930,39 @@
         }
     ]
 }
+{
+       "templates": [
+        {
+            "categories": [
+                "Other"
+            ],
+            "description": "SquidProxy",
+            "env": [{
+                    },
+                {
+                    "label": "CONTEXT_PATH",
+                    "name": "CONTEXT_PATH",
+                    "set": "Squid Proxy"
+                }
+            ],
+            "image": "datadog/squid",
+            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/adguard.png",
+            "name": "squidproxy",
+            "platform": "linux",
+            "ports": [
+                "3128:3128/tcp",
+                
+            ],
+            "restart_policy": "unless-stopped",
+            "title": "SquidProxy",
+            "type": 1,
+            "volumes": [{
+                    "bind": "/doc/Adguard/Workdir",
+                    "container": "/var/spool/squid"
+                },
+                {
+                    "bind": "/doc/Adguard/Conf",
+                    "container": "/var/log/squid"
+                }
+            ]
+        },
