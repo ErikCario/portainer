@@ -8930,39 +8930,4 @@
         }
     ]
 }
-{
-       "templates": [
-        {
-            "categories": [
-                "Other"
-            ],
-            "description": "SquidProxy",
-            "env": [{
-                    },
-                {
-                    "label": "CONTEXT_PATH",
-                    "name": "CONTEXT_PATH",
-                    "set": "Squid Proxy"
-                }
-            ],
-            "image": "datadog/squid",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/adguard.png",
-            "name": "squidproxy",
-            "platform": "linux",
-            "ports": [
-                "3128:3128/tcp",
-                
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "SquidProxy",
-            "type": 1,
-            "volumes": [{
-                    "bind": "/doc/Adguard/Workdir",
-                    "container": "/var/spool/squid"
-                },
-                {
-                    "bind": "/doc/Adguard/Conf",
-                    "container": "/var/log/squid"
-                }
-            ]
-        }
+
