@@ -2912,7 +2912,7 @@
                     "name": "TZ"
                 },
                 {
-                    "default": "PASSWORD",
+                    "default": "Kingsmoke1",
                     "description": "Set the password for the results database.",
                     "label": "PASSWORD",
                     "name": "PASSWORD"
@@ -2966,7 +2966,7 @@
             "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /doc/librespeed/config</p>",
             "platform": "linux",
             "ports": [
-                "80:80/tcp"
+                "7080:80/tcp"
             ],
             "restart_policy": "unless-stopped",
             "title": "Librespeed",
